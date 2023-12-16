@@ -6,13 +6,13 @@
   ** On installation, you'll see the following prompts:**
 
   ```
-    What is your project named? admin-dashboard > name your project here
-    Would you like to use TypeScript? No / Yes > Click Yes to use typeScript and No for javaScript
-    Would you like to use ESLint? No / Yes > choose to ESLint or not
-    Would you like to use Tailwind CSS? No / Yes > choose to use Tailwind for styling or not
-    Would you like to use `src/` directory? No / Yes > choose to add all layout in the "src" directory or not
-    Would you like to use App Router? (recommended) No / Yes > choose between App Router Appilication or Page Router Appilication
-    Would you like to customize the default import alias (@/_)? No / Yes > choose how to make your import (No)recommended
+    What is your project named? admin-dashboard > (name your project here)
+    Would you like to use TypeScript? No / Yes > (Click Yes to use typeScript and No for javaScript)
+    Would you like to use ESLint? No / Yes > (choose to ESLint or not)
+    Would you like to use Tailwind CSS? No / Yes > (choose to use Tailwind for styling or not)
+    Would you like to use `src/` directory? No / Yes > (choose to add all layout in the "src" directory or not)
+    Would you like to use App Router? (recommended) No / Yes > (choose between App Router Appilication or Page Router Appilication)
+    Would you like to customize the default import alias (@/_)? No / Yes > (choose how to make your import (No)recommended)
     What import alias would you like configured? @/_
   ```
 
@@ -111,9 +111,14 @@ const Dashboard = () => {
 export default Dashboard
 ```
 
-### UI component
+### Main UI component
 
 You can create the UI component inside the app folder or outside it but all inside the "src" directory. For me it have mastered me to have my route and component in different folders
 so i will be creating my UI component folder inside the "src" directory same folder level will app.
 
 With that said on the src directory create a folder named "Components"(recommended) or "UI" in your src folder and inside the component folder create another two folder one for "Login" and the other for "Dashbord"
+
+** Inside the Dashbord folder in the Components directory add this code: **
+
+- Create two more folder 'navbar' and 'sidebar'
+- On each created folder add a .tsx file with a prefered name or "Navbar" and "Sidebar" respectively
