@@ -1,6 +1,6 @@
 import Navbar from "@/Components/Dashboard/navbar/Navbar"
-import Sidebar from "@/Components/Dashboard/sidebar/Sidebar"
 import '../../Components/globals.css'
+import Sidebar from "@/Components/Dashboard/sidebar/Sidebar"
 
 interface children {
   children: React.ReactNode
