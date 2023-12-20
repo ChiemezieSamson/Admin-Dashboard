@@ -1,6 +1,9 @@
 "use client"
 import { usePathname } from "next/navigation"
-import { MdNotifications, MdOutlineChat, MdPublic, MdSearch } from "react-icons/md"
+import { MdNotifications, MdOutlineChat, MdPublic } from "react-icons/md"
+import { SearchInput } from "../SharedComponents/SharedComponents"
+
+
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -11,10 +14,7 @@ const Navbar = () => {
 
       <div className="grid grid-flow-col gap-x-2.5 items-center">
         {/* nav search */}
-        <div className="bg-[#2e374a] grid items-center grid-flow-col gap-x-2.5 rounded-lg p-2.5">
-          <MdSearch />
-          <input type="text" placeholder="search..." className="bg-transparent border-0 focus:border-0 outline-0 focus:outline-0 text-white"/>
-        </div>
+        <SearchInput placeholder={"search..."}/>
 
         {/* Icons */}
         <div className="grid grid-flow-col gap-x-4">

@@ -1,6 +1,7 @@
 import Navbar from "@/Components/Dashboard/navbar/Navbar"
 import '../../Components/globals.css'
 import Sidebar from "@/Components/Dashboard/sidebar/Sidebar"
+import Footer from "@/Components/Dashboard/footer/Footer"
 
 interface children {
   children: React.ReactNode
@@ -20,6 +21,8 @@ const layout = ({children}: children) => {
         <div>
           {children}
         </div>
+
+        <Footer />
       </div>
     </div>
   )
