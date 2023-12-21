@@ -9,7 +9,7 @@ interface children {
 const layout = ({children}: children) => {
   return (
     <div className="grid grid-cols-5">
-      <aside className="col-span-1 bgSoft p-5">
+      <aside className="col-span-1 bgSoft h-screen p-5">
         <Sidebar />
       </aside>
 

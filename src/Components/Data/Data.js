@@ -13,6 +13,7 @@ import {
 } from "react-icons/md";
 
 import avatar from "./../../../public/noavatar.png";
+import noproduct from "./../../../public/noproduct.jpg";
 import rightbarImage from "./../../../public/astronaut.png";
 
 export const menuItems = [
@@ -249,5 +250,26 @@ export const usersItem = [
 		date: "Oct 29 2023",
 		role: "client",
 		status: "active",
+	},
+];
+
+export const prodctsItem = [
+	{
+		id: 0,
+		avatar: noproduct,
+		title: "Iphone",
+		description: "dvfsdgfdshghsdfhretsafgsdgsdfagwgdsgsdgdsg",
+		price: "$123",
+		Created_At: "Oct 20 2023",
+		Stock: "34",
+	},
+	{
+		id: 2,
+		avatar: noproduct,
+		title: "Ig monitor",
+		description: "dvfsdgfdshghsdfhretsafgsdgsdfagwgdsgsdgdsg",
+		price: "$123",
+		Created_At: "Oct 20 2023",
+		Stock: "34",
 	},
 ];
