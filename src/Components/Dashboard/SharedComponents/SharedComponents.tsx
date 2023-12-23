@@ -20,7 +20,7 @@ export const SearchInput = ({placeholder}: {placeholder: string}) => {
 export const AddNewButton = ({text, url}: {text: string, url: string}) => {
 
   return (
-    <Link href={`/dashboard/${url}/add`}>
+    <Link href={`/dashboard/${url}`}>
       <button className="p-2.5 max-w-[100px] text-white bg-[#5d57c9] button">{text}</button>
     </Link>
   )

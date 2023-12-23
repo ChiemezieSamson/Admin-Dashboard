@@ -273,3 +273,5 @@ export const prodctsItem = [
 		Stock: "34",
 	},
 ];
+
+export const addProductSeleteOptionItems = ["kitchen", "phone", "computer"];

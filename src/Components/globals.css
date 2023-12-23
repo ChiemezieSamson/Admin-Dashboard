@@ -32,6 +32,10 @@
   td {
     @apply p-2.5
   }
+
+  option {
+   @apply bg-[#182237] text-sm my-1 py-2 inline-block last:mb-0 text-[#b7bac1]
+  }
 }
 
 @layer utilities{
@@ -49,6 +53,11 @@
 
   .button {
     @apply p-2.5 grid grid-flow-col items-center border-0 cursor-pointer rounded-md
+  }
+
+  .productForm {    
+    @apply w-full p-4 bg-[#151c2c] text-white border border-solid border-[#2e374a] shadow-inner focus:shadow-slate-400/60
+    focus:outline-none focus:border-gray-400 focus:ring-0 mb-7 caret-black rounded
   }
 }
 

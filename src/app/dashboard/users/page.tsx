@@ -8,7 +8,7 @@ const UsersPage = () => {
     <div className="bgSoft p-5 rounded-lg mt-5">
       <div className="grid grid-flow-col items-center justify-between">
         <Search placeholder={"Search for a user..."}/>
-        <AddNewButton url="users" text="Add New"/>
+        <AddNewButton url="users/add-new-user" text="Add New"/>
       </div>
 
       <div>

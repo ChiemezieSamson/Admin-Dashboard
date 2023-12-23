@@ -8,7 +8,7 @@ const ProductPage = () => {
     <div className="bgSoft p-5 rounded-lg mt-5">
       <div className="grid grid-flow-col items-center justify-between">
         <Search placeholder={"Search for a product..."}/>
-        <AddNewButton url="products" text="Add New"/>
+        <AddNewButton url="products/add-new-products" text="Add New"/>
       </div>
 
       <div>
