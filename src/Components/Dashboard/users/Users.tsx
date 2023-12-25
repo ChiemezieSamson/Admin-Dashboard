@@ -37,7 +37,7 @@ const Users = () => {
             <td><span>{user.status}</span></td>
             <td>
               <div className="grid grid-flow-col gap-x-2.5 max-w-[90px]">
-                <Link href={'/'}>
+                <Link href={'/dashboard/users/test'}>
                   <button className="button px-2.5 py-1.5 bg-teal-500">View</button>
                 </Link>
                 

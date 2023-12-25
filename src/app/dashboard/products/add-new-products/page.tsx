@@ -1,3 +1,4 @@
+import { SubmitButton } from '@/Components/Dashboard/SharedComponents/SharedComponents'
 import { addProductSeleteOptionItems } from '@/Components/Data/Data'
 
 const AddproductPage = () => {
@@ -21,7 +22,10 @@ const AddproductPage = () => {
         <input type="text" name="color" id="color" placeholder="color" className='productForm'/>
         <input type="text" name="size" id="size" placeholder="size" className='productForm'/>
         <textarea name="description" id="description" rows={16} placeholder="Description" className='productForm col-span-2 resize-none'></textarea>
-        <button type="submit" className='text-white bg-teal-500 button col-span-2'>Submit</button>
+        <div>
+          
+        </div>
+        <SubmitButton submitText={"Submit"}/>
       </form>
     </div>
   )

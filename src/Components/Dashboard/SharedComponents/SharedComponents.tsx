@@ -25,3 +25,18 @@ export const AddNewButton = ({text, url}: {text: string, url: string}) => {
     </Link>
   )
 }
+
+export const SubmitButton = ({submitText}: {submitText: string}) => (<button type="submit" className='text-white bg-teal-500 button col-span-2'>{submitText}</button>)
+
+export const UserProductImageComponnet = ({avatar, name, col}: {avatar: string, name: string, col: string}) => {
+  return (
+    <section className={`${col ? col : "col-span-1"} bgSoft p-5 rounded-lg font-bold textSoft h-max`}>
+      <figure>
+        <div className="w-full h-72 relative rounded-lg overflow-hidden mb-5">
+          <Image src={avatar} alt="" fill/>
+        </div>
+        <figcaption>{name}</figcaption>
+      </figure>
+    </section>
+  )
+}

@@ -1,3 +1,4 @@
+import { SubmitButton } from '@/Components/Dashboard/SharedComponents/SharedComponents'
 import { addProductSeleteOptionItems } from '@/Components/Data/Data'
 
 const AddproductPage = () => {
@@ -22,7 +23,7 @@ const AddproductPage = () => {
           <option value={0} className="capitalize">No</option>         
         </select>
         <textarea name="address" id="address" rows={16} placeholder="address" className='productForm col-span-2 resize-none'></textarea>
-        <button type="submit" className='text-white bg-teal-500 button col-span-2'>Submit</button>
+        <SubmitButton submitText={"Submit"}/>
       </form>
     </div>
   )

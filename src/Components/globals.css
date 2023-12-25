@@ -52,12 +52,12 @@
   }
 
   .button {
-    @apply p-2.5 grid grid-flow-col items-center border-0 cursor-pointer rounded-md
+    @apply p-2.5 w-full items-center border-0 cursor-pointer rounded-md
   }
 
   .productForm {    
     @apply w-full p-4 bg-[#151c2c] text-white border border-solid border-[#2e374a] shadow-inner focus:shadow-slate-400/60
-    focus:outline-none focus:border-gray-400 focus:ring-0 mb-7 caret-black rounded
+    focus:outline-none focus:border-gray-400 focus:ring-0 mb-4 caret-white rounded
   }
 }
 
