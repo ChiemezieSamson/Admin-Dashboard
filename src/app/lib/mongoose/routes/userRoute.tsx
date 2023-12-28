@@ -1,11 +1,11 @@
 import { connectDB } from "../../connection";
 import { User } from "../modles/userSchema";
 
-export const fetchUser = async () => {
-
+export const fetchUser = async ({user}:{user: string}) => {
+  const regex = new RegExp(user, "i")
   try {
     connectDB()
-    const users = await User.find();
+    const users = await User.find({username: {$regex: regex}});
 
     return users
 

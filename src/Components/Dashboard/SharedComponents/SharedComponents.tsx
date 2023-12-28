@@ -1,18 +1,39 @@
-import { usersItem } from "@/Components/Data/Data"
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { MdSearch } from "react-icons/md"
-import Avatar from "./../../../../public/noavatar.png"
 import React from "react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useDebouncedCallback } from "use-debounce"
 
 
 export const Search = ({placeholder}: {placeholder: string}) => ( <SearchInput placeholder={placeholder}/> )
 
 export const SearchInput = ({placeholder}: {placeholder: string}) => {
+  const searchParams = useSearchParams()
+  const {replace} = useRouter()
+  const pathname = usePathname()
+
+  const handleSearch = useDebouncedCallback((event: any) => {
+
+    if (event.target.value && event.target.value.length > 2) {
+
+      const params = new URLSearchParams(searchParams)
+    
+      params.set("username", event.target.value)
+    
+      replace(`${pathname}?${params}`)
+    } else {
+      replace(`${pathname}`)
+    }
+
+  }, 300)
+
+  
   return (
     <div className="bg-[#2e374a] grid items-center grid-flow-col gap-x-2.5 rounded-lg p-2.5">
       <MdSearch />
-      <input type="text" placeholder={placeholder} className="bg-transparent border-0 focus:border-0 outline-0 focus:outline-0 text-white"/>
+      <input type="text" placeholder={placeholder} className="bg-transparent border-0 focus:border-0 outline-0 focus:outline-0 text-white" onChange={handleSearch}/>
     </div>
   )
 }
