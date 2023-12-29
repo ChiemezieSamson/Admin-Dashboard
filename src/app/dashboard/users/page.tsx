@@ -1,9 +1,13 @@
 import { AddNewButton, Search } from "@/Components/Dashboard/SharedComponents/SharedComponents"
 import Pagination from "@/Components/Dashboard/pagination/Pagination"
 import Users from "@/Components/Dashboard/users/Users"
+import { fetchUser } from "@/app/lib/mongoose/routes/userRoute"
 
 
 const UsersPage = async ({searchParams}:{searchParams: any}) => {
+  const user = searchParams?.username 
+  const page: string = searchParams?.page
+  const {users, totalUsers} = await fetchUser({user, page})
   
   return (
     <div className="bgSoft p-5 rounded-lg mt-5">
@@ -13,11 +17,11 @@ const UsersPage = async ({searchParams}:{searchParams: any}) => {
       </div>
 
       <div>
-        <Users searchParams={searchParams}/>
+        <Users users={users}/>
       </div>
 
       <div className="mt-10">
-        <Pagination />
+        <Pagination count={totalUsers}/>
       </div>
     </div>
   )

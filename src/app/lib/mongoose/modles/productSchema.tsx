@@ -43,4 +43,4 @@ const productSchema = new Schema<Product>({
 }, {timestamps: true})
 
 
-export const User = mongoose.models.User ||  model<Product>('User', productSchema);
+export const Product = mongoose.models.Product ||  model<Product>('Product', productSchema);

@@ -20,7 +20,7 @@ export const SearchInput = ({placeholder}: {placeholder: string}) => {
 
       const params = new URLSearchParams(searchParams)
     
-      params.set("username", event.target.value)
+      params.set("product", event.target.value)
     
       replace(`${pathname}?${params}`)
     } else {

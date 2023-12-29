@@ -4,9 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 
-const Users = async ({searchParams}:{searchParams: any}) => {
-  const user = searchParams?.username 
-  const users = await fetchUser({user})
+const Users = async ({users}:{users: any[] | undefined}) => {
 
   return (
     <table className="w-full">
