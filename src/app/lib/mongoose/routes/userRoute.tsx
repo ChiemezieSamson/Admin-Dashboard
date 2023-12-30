@@ -1,5 +1,5 @@
 import { connectDB } from "../../connection";
-import { User } from "../modles/userSchema";
+import  User from "../modles/userSchema";
 
 export const fetchUser = async ({user, page}:{user: string, page: string}) => {
   const regex = new RegExp(user, "i")

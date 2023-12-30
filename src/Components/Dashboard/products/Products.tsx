@@ -1,4 +1,5 @@
 import { prodctsItem } from "@/Components/Data/Data"
+import deleteProduct from "@/app/lib/actions/deleteproduct/deleteProduct"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -31,15 +32,19 @@ const Products = ({products}: {products: any[] | undefined}) => {
             </td>
             <td><span>{product.description}</span></td>
             <td><span>{product.price}</span></td>
-            <td><span>{product.CreatedAt?.toString().slice(0, 16)}</span></td>
+            <td><span>{product.createdAt?.toString().slice(0, 16)}</span></td>
             <td><span>{product.stock}</span></td>
             <td>
               <div className="grid grid-flow-col gap-x-2.5 max-w-[90px]">
                 <Link href={`/dashboard/products/${product.title}`}>
                   <button className="button px-2.5 py-1.5 bg-teal-500">View</button>
                 </Link>
+
+                <form action={deleteProduct}>
+                  <input type="hidden" name="_id" value={JSON.parse(JSON.stringify(product._id))}/>
+                  <button className="button px-2.5 py-1.5 bg-red-500">Delete</button>                
+                </form>
                 
-                <button className="button px-2.5 py-1.5 bg-red-500">Delete</button>                
               </div>
             </td>
           </tr>

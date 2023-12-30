@@ -1,11 +1,12 @@
 import { SubmitButton } from '@/Components/Dashboard/SharedComponents/SharedComponents'
 import { addProductSeleteOptionItems } from '@/Components/Data/Data'
+import addUsers from '@/app/lib/actions/adduser/addUser'
 
 const AddproductPage = () => {
   const selectItem = addProductSeleteOptionItems.map((item, index) => {return {id: index, value: item}})
   return (
     <div className='bgSoft p-5 rounded-lg mt-5'>
-      <form className='grid grid-cols-2 gap-x-[2%]'>
+      <form action={addUsers} className='grid grid-cols-2 gap-x-[2%]'>
         <input type="text" name="username" id="username" placeholder="username" required className='productForm'/>
         <input type="email" name="email" id="email" placeholder="email" required className='productForm'/>
         <input type="password" name="password" id="password" placeholder="password" required className='productForm'/>

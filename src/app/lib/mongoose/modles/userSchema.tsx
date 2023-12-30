@@ -4,11 +4,11 @@ interface User {
   username: string
   email: string
   password: string
-  image: string
+  image?: string
   isAdmin: Boolean
   isActive: Boolean
-  phone: string
-  address: string
+  phone?: string
+  address?: string
 }
 
 
@@ -17,8 +17,8 @@ const userSchema = new Schema<User>({
     type: String,
     required: true,
     unique: true,
-    min: 3,
-    max: 12,
+    minlength: 3,
+    maxlength: 12,
   },
   email: {
     type: String,
@@ -50,4 +50,6 @@ const userSchema = new Schema<User>({
 
 
 
-export const User = mongoose.models.User || model<User>('User', userSchema);
+const User = mongoose.models.User || model<User>('User', userSchema);
+
+export default User

@@ -1,4 +1,5 @@
 import { usersItem } from "@/Components/Data/Data"
+import deleteUser from "@/app/lib/actions/deleteuser/deleteUser"
 import { fetchUser } from "@/app/lib/mongoose/routes/userRoute"
 import Image from "next/image"
 import Link from "next/link"
@@ -41,7 +42,10 @@ const Users = async ({users}:{users: any[] | undefined}) => {
                   <button className="button px-2.5 py-1.5 bg-teal-500">View</button>
                 </Link>
                 
-                <button className="button px-2.5 py-1.5 bg-red-500">Delete</button>                
+                <form action={deleteUser}>
+                  <input type="hidden" name="_id" value={JSON.parse(JSON.stringify(user._id))}/>
+                  <button className="button px-2.5 py-1.5 bg-red-500">Delete</button>                
+                </form>
               </div>
             </td>
           </tr>
