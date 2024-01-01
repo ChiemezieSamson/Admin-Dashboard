@@ -26,7 +26,7 @@ const Products = ({products}: {products: any[] | undefined}) => {
           <tr key={product._id}>
             <td>
               <figure className="grid grid-cols-3 max-w-[180px] items-center text-left">
-                <Image src={product.image || prodctsItem[0].avatar} alt="" className="w-10 h-10 rounded-full col-span-1"/>
+                <Image src={product.image || prodctsItem[0].avatar}  width={40} height={40}  alt="" className="w-10 h-10 rounded-full col-span-1"/>
                 <figcaption className="col-span-2">{product.title}</figcaption>
               </figure>
             </td>

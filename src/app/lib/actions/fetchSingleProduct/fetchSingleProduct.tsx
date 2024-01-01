@@ -1,10 +1,20 @@
 import { connectDB } from "../../connection";
 import { Product } from "../../mongoose/modles/productSchema"
 
-export const fetchSingleProduct = async ({_id}:{_id: string}) => {
+export const fetchSingleProduct = async ({id}:{id: string}) => {
+  const checkforspace = id.match(/%20/gi)
+  let newId
+  
+  if (!checkforspace) {
+    newId = id
+  } else {
+    newId = decodeURIComponent(id.replace(/\+/g, ' '))
+  }
+  
+ 
   try {
     connectDB()
-    const product = await Product.findById(_id)
+    const product = await Product.findOne({title: newId})
     return product
 
   }catch (error: unknown) {

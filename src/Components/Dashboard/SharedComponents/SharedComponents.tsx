@@ -49,14 +49,14 @@ export const AddNewButton = ({text, url}: {text: string, url: string}) => {
 
 export const SubmitButton = ({submitText}: {submitText: string}) => (<button type="submit" className='text-white bg-teal-500 button col-span-2'>{submitText}</button>)
 
-export const UserProductImageComponnet = ({avatar, name, col, user}: {avatar: string, name: string, col: string, user: any}) => {
+export const UserProductImageComponnet = ({avatar, name, col, item}: {avatar: string, name: string, col: string, item: any}) => {
   return (
     <section className={`${col ? col : "col-span-1"} bgSoft p-5 rounded-lg font-bold textSoft h-max`}>
       <figure>
         <div className="w-full h-72 relative rounded-lg overflow-hidden mb-5">
-          <Image src={JSON.parse(JSON.stringify(user.image)) || avatar} alt="" fill/>
+          <Image src={JSON.parse(JSON.stringify(item.image)) || avatar} alt="" fill/>
         </div>
-        <figcaption>{JSON.parse(JSON.stringify(user.username))}</figcaption>
+        <figcaption>{item.username ? JSON.parse(JSON.stringify(item.username)) : JSON.parse(JSON.stringify(item.title))}</figcaption>
       </figure>
     </section>
   )
