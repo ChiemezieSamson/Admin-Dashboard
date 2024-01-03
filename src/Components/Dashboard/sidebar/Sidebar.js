@@ -4,8 +4,11 @@ import Avatar from "./../../../../public/noavatar.png";
 import MenuLink from "./menuLink/MenuLink";
 import { MdLogout } from "react-icons/md";
 import Link from "next/link";
+import { auth } from "@/app/auth";
 
-const Sidebar = () => {
+const Sidebar = async () => {
+	const session = await auth();
+	console.log(session);
 	return (
 		<div className="sticky top-10 ">
 			<figure className="grid grid-flow-col items-center gap-x-5 mb-5 max-w-[240px]">
